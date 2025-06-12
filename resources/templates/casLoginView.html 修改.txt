@@ -1,0 +1,21 @@
+ <div id="emailLogin" class="tab-content">
+                   <div id="emailLogin" class="tab-content">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h3 style="color: #333; margin-bottom: 10px;">邮箱验证码登录</h3>
+                <p style="color: #666; font-size: 14px; line-height: 1.5;">
+                    使用您的注册邮箱接收验证码进行安全登录,系统将向您的注册邮箱发送6位数字验证码<br>
+                    <span style="font-size: 12px;">Use your registered email to receive verification code for secure login, A 6-digit >
+</span>
+                </p>
+            </div>
+
+                <form th:action="@{/login}" method="post" style="display: inline;">
+        <input type="hidden" name="execution" th:value="${flowExecutionKey}"/>
+        <input type="hidden" name="_eventId" value="emailLogin"/>
+        <button type="submit" class="btn btn-outline-primary">
+            <i class="fa fa-envelope"></i>
+            <span class="lang-zh">邮箱验证登录 /Email Verification Login </span>
+            <span class="lang-en" style="display:none;">Email Verification Login</span>
+        </button>
+    </form>
+        </div>
